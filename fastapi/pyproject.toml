@@ -11,7 +11,7 @@ fastapi = "^0.109.2"
 httpx = "^0.26.0"
 pillow = "^10.2.0"
 python-multipart = "^0.0.9"
-uvicorn = "^0.27.1"
+uvicorn = {extras = ["standard"], version = "^0.27.1"}
 ulid-py = "^1.1.0"
 
 

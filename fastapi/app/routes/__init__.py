@@ -11,6 +11,7 @@ from .day_13 import day_13_router
 from .day_14 import day_14_router
 from .day_15 import day_15_router
 from .day18 import day_18_router
+from .day19 import day_19_router
 from .example import example_router
 
 router = APIRouter()
@@ -28,6 +29,7 @@ router.include_router(router=day_13_router)
 router.include_router(router=day_14_router)
 router.include_router(router=day_15_router)
 router.include_router(router=day_18_router)
+router.include_router(router=day_19_router)
 
 __all__ = [
     "router",
