@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from .day_1 import day_1_router
-from .day_4 import day_4_router
+from .day4 import day_4_router
 from .day_5 import day_5_router
 from .day_6 import day_6_router
 from .day_7 import day_7_router
@@ -10,6 +10,7 @@ from .day_12 import day_12_router
 from .day_13 import day_13_router
 from .day_14 import day_14_router
 from .day_15 import day_15_router
+from .day18 import day_18_router
 from .example import example_router
 
 router = APIRouter()
@@ -26,6 +27,7 @@ router.include_router(router=day_12_router)
 router.include_router(router=day_13_router)
 router.include_router(router=day_14_router)
 router.include_router(router=day_15_router)
+router.include_router(router=day_18_router)
 
 __all__ = [
     "router",
