@@ -10,19 +10,19 @@ G = 9.825  # m/s^2
 
 
 class CacheStore:
-    def __init__(self):
-        self.instance = {}
+    _instance = None
 
-    def __new__(cls):
-        if not hasattr(cls, "instance"):
-            cls.instance = super(CacheStore, cls).__new__(cls)
-        return cls.instance
-
-    def get(self, key):
-        return self.instance.get(key)
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls, *args, **kwargs)
+            cls._data = {}
+        return cls._instance
 
     def set(self, key, value):
-        self.instance[key] = value
+        self._data[key] = value
+
+    def get(self, key):
+        return self._data.get(key)
 
 
 @day_8_router.get("/weight/{pokedex_number}")
