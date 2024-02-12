@@ -13,6 +13,7 @@ pillow = "^10.2.0"
 python-multipart = "^0.0.9"
 uvicorn = {extras = ["standard"], version = "^0.27.1"}
 ulid-py = "^1.1.0"
+s2sphere = "^0.2.5"
 
 
 [build-system]
